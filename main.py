@@ -1,7 +1,7 @@
 from datetime import datetime
 import os
 import json
-from data.schifr_on_off import schifr_on, schifr_off, list_word
+from schifr_on_off import schifr_on, schifr_off, list_word
 
 #Начало программы
 def main():
