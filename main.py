@@ -99,7 +99,7 @@ def menu_notes():
             print('Заметки:')
             open_notes()
         if choice == '2':
-            write_to_file(f'data\notes\{us}.txt',new_zametka())
+            write_to_file('data\\notes\\'+f'{us}.txt',new_zametka())
         if choice == '3':
             os.system('cls||clear')
             main()
@@ -129,7 +129,7 @@ def new_zametka():
 def Sorted_value(text_value):
     os.system('cls||clear')
     print(f'Просмотр заметок с сортировкой по: {text_value}\n')
-    list_z = read_file(f'data\notes\{us}.txt').split('\n')
+    list_z = read_file('data\\notes\\'+f'{us}.txt').split('\n')
     list_spisok = []
     for i in list_z:
         if i != '':
@@ -148,7 +148,7 @@ def Fild_name():
     os.system('cls||clear')
     print('Поиск по названию заметки\n')
     f = input("Введите текст, для поиска: ")
-    list_z = read_file(f'data\notes\{us}.txt').split('\n')
+    list_z = read_file('data\\notes\\'+f'{us}.txt').split('\n')
     list_spisok = []
     for i in list_z:
         if i != '':

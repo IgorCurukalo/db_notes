@@ -34,7 +34,7 @@ def get_key(d, value):
 def get_key2(d, value):
     for k, v in d.items():
         if str(v) == str(value):
-            return k
+            return int(k)
 
 #Закодировать
 def schifr_on(text,list_word):
@@ -54,9 +54,9 @@ print(schifr_on(txt,list_word))
 #Раскодировать
 def schifr_off(text,list_word):
     result = ''
-    text = text.split(',')
-    for i in text:
-        result += ''.join(chr(get_key2(list_word,str(i))))
+    listt = text.split(',')
+    for i in listt:
+        result += ''.join(chr(get_key2(list_word,i)))
     return result
 
 #Тест Расшифровали
